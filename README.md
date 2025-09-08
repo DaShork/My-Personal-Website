@@ -35,13 +35,13 @@ This repo contains:
 
 ## 🚀 How to View My Portfolio
 You can view the live site here:  
-👉 [https://your-username.github.io](https://your-username.github.io)
+👉 [Waiting for Deployment]()
 
 ---
 
 ## 📫 Contact
 - GitHub: [DaShork](https://github.com/DaShork)  
-- LinkedIn: [Your Name](https://www.linkedin.com/in/vonhatminh2311)  
+- LinkedIn: [Võ Nhật Minh](https://www.linkedin.com/in/vonhatminh2311)  
 - Email: nhatminhvo2311@gmail.com
 
 ---
