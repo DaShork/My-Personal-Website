@@ -1,6 +1,6 @@
 import { BulbOutlined, GlobalOutlined, SettingOutlined } from '@ant-design/icons'
 import { Button, Dropdown } from 'antd'
-import Logo from "../../../public/DaShork.svg"
+import Logo from "/DaShork.svg?url"
 import './Header.css'
 
 function Header({ nav, language, themeMode, onLanguageChange, onThemeChange }) {
