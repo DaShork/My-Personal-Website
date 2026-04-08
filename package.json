@@ -8,7 +8,7 @@
 
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build --base=/My-Personal-Website/",
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
