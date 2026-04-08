@@ -1,0 +1,229 @@
+.app {
+    background:
+      radial-gradient(900px 600px at 8% -8%, rgba(210, 199, 184, 0.55) 0%, transparent 50%),
+      radial-gradient(800px 600px at 90% 5%, rgba(15, 107, 88, 0.15) 0%, transparent 52%),
+      linear-gradient(180deg, var(--bg), var(--bg));
+    color: var(--text-main);
+  }
+  
+  main {
+    width: min(860px, 92%);
+    margin: 0 auto;
+  }
+  
+  .hero {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 28px;
+    align-items: center;
+    min-height: 380px;
+  }
+  
+  .hero h1 {
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    margin: 0;
+  }
+  
+  .hero h3 {
+    color: #0f6b58;
+    margin: 14px 0 8px;
+  }
+  
+  .hero-avatar {
+    width: 100%;
+    border-radius: 24px;
+    min-height: 280px;
+    object-fit: cover;
+  }
+  
+  .hero-image-wrap {
+    border: 1px solid var(--border-soft);
+    border-radius: 18px;
+    padding: 8px;
+    background: var(--surface);
+    box-shadow: var(--card-shadow);
+  }
+  
+  .hero-metrics {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 16px;
+  }
+  
+  .product-section {
+    margin-top: 12px;
+  }
+  
+  .slide {
+    min-height: 240px;
+    border-radius: 22px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+  }
+  
+  .overlay {
+    min-height: 240px;
+    background: linear-gradient(120deg, rgba(6, 35, 29, 0.8), rgba(34, 49, 72, 0.35));
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 8%;
+  }
+  
+  .product-thumbs {
+    margin-top: 12px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  
+  .thumb-card {
+    border: 1px solid var(--border-soft);
+    border-radius: 10px;
+    background: var(--surface);
+    overflow: hidden;
+  }
+  
+  .thumb-card img {
+    width: 100%;
+    height: 78px;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .thumb-card h4 {
+    margin: 8px;
+    font-size: 0.82rem;
+  }
+  
+  .about-layout {
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    gap: 28px;
+    margin-bottom: 22px;
+  }
+  
+  .about-left img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 10px;
+  }
+  
+  .story-stats {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+  
+  .story-stats .ant-card {
+    border-radius: 10px;
+    text-align: center;
+    background: linear-gradient(120deg, #0f6b58, #223148);
+    color: #fff;
+  }
+  
+  .about-text-card {
+    border-radius: 12px;
+  }
+  
+  .about-layout img {
+    width: 100%;
+    border-radius: 18px;
+  }
+  
+  .social-grid{
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  
+  .social-grid .ant-card,
+  .contact-layout form,
+  .contact-info {
+    border-radius: 16px !important;
+    box-shadow: none;
+  }
+  
+  .faq-section .ant-collapse-item {
+    border-radius: 999px !important;
+    margin-bottom: 12px;
+    overflow: hidden;
+  }
+  
+  .faq-section {
+    background: color-mix(in srgb, #dbfff2 55%, var(--surface));
+  }
+  
+  .contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    gap: 24px;
+  }
+  
+  .contact-layout form,
+  .contact-info {
+    padding: 20px;
+    border: 1px solid var(--border-soft);
+    background: var(--surface);
+  }
+  
+  .contact-info .pill {
+    padding: 12px 14px;
+    border-radius: 999px;
+    background: var(--surface);
+    border: 1px solid var(--border-soft);
+    margin-bottom: 10px;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 14px;
+    font-size: 1.6rem;
+    margin-top: 16px;
+  }
+  
+  .footer {
+    margin-top: 60px;
+    padding: 36px 5%;
+    text-align: center;
+    border-top: 1px solid var(--border-soft);
+    color: #d2c7b8;
+    background: linear-gradient(120deg, #0e202c, #15232f, #123d45);
+  }
+  
+  .reveal {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: all 0.7s ease;
+  }
+  
+  .reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  @media (max-width: 980px) {
+    .hero,
+    .about-layout,
+    .contact-layout,
+    .social-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .section-shell {
+      padding-inline: 16px;
+    }
+  
+    .hero {
+      min-height: auto;
+      padding-top: 28px;
+    }
+  
+    .product-thumbs {
+      grid-template-columns: 1fr;
+    }
+  }
+  

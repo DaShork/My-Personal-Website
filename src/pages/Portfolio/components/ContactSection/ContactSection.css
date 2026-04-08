@@ -1,0 +1,132 @@
+/* Contact Section Styles */
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.contact-layout form {
+  border-radius: 16px !important;
+  box-shadow: none;
+}
+
+.contact-layout .ant-form-item-required::before {
+  content: '* ' !important;
+  color: #ff4d4f;
+}
+
+.contact-info {
+  border-radius: 16px !important;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pill {
+  background: linear-gradient(120deg, rgba(15, 107, 88, 0.1), rgba(34, 49, 72, 0.05));
+  border: 1px solid #0f6b58;
+  border-radius: 999px;
+  padding: 12px 16px;
+  color: var(--text-main);
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.social-icons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.social-icons svg {
+  font-size: 24px;
+  color: #0f6b58;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.social-icons svg:hover {
+  transform: scale(1.2);
+  color: #223148;
+}
+
+/* Ant Design Form Customization */
+.ant-form-item-label > label {
+  color: var(--text-main) !important;
+}
+
+.ant-input,
+.ant-input-textarea {
+  border-radius: 8px !important;
+  border-color: var(--border-soft) !important;
+}
+
+.ant-input:hover,
+.ant-input-textarea:hover {
+  border-color: #0f6b58 !important;
+}
+
+.ant-input:focus,
+.ant-input-textarea:focus,
+.ant-input-focused,
+.ant-input-textarea-focused {
+  border-color: #0f6b58 !important;
+  box-shadow: 0 0 0 2px rgba(15, 107, 88, 0.1) !important;
+}
+
+.ant-btn-primary {
+  background: linear-gradient(120deg, #0f6b58, #223148) !important;
+  border-color: transparent !important;
+}
+
+.ant-btn-primary:hover {
+  filter: brightness(1.08) !important;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .social-icons {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 40px 0;
+  }
+
+  .contact-layout {
+    gap: 20px;
+  }
+
+  .social-icons {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 30px 0;
+  }
+
+  .contact-layout {
+    gap: 16px;
+  }
+
+  .pill {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+
+  .social-icons svg {
+    font-size: 20px;
+  }
+}

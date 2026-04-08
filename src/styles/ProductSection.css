@@ -1,0 +1,55 @@
+/* ProductSection Styles for GitHub Repositories */
+
+.product-section {
+  margin: 80px 0;
+  padding: 40px 20px;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 40px;
+  font-weight: 500;
+}
+
+.repos-grid {
+  margin-top: 40px;
+}
+
+.repo-card {
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(14, 11, 11, 0.1);
+}
+
+.repo-card:hover {
+  box-shadow: 0 8px 16px rgba(15, 107, 88, 0.15);
+  transform: translateY(-4px);
+}
+
+/* Dark mode support */
+[data-theme='dark'] .repo-card {
+  background-color: #141414;
+  border-color: #434343;
+}
+
+[data-theme='dark'] .repo-card h3 {
+  color: #0f6b58 !important;
+}
+
+[data-theme='dark'] .repo-card p {
+  color: #bfbfbf !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .product-section {
+    margin: 60px 0;
+    padding: 30px 15px;
+  }
+
+  .section-subtitle {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+}
