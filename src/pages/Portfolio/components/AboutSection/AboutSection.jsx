@@ -1,5 +1,5 @@
 import { Card } from 'antd'
-import Avt from '../../../../assets/DaShork_Avatar.jpg'
+import Avt from '../../../../assets/DaShork_Avatar.JPG'
 import './AboutSection.css'
 
 function AboutSection({ language = 'vi' }) {

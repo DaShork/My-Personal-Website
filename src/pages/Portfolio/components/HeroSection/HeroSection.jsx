@@ -1,5 +1,5 @@
 import { Tag } from 'antd'
-import Avt from '../../../../assets/DaShork_Avatar.jpg'
+import Avt from '../../../../assets/DaShork_Avatar.JPG'
 import './HeroSection.css'
 
 function HeroSection({ language = 'vi' }) {
