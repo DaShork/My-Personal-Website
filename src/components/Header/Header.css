@@ -39,7 +39,7 @@
 }
 
 .nav-menu a:hover {
-  color: #0f6b58;
+  color: var(--color-primary);
 }
 
 .nav-menu a::after {
@@ -50,7 +50,7 @@
   width: 0;
   height: 2px;
   border-radius: 999px;
-  background: linear-gradient(120deg, #0f6b58, #223148);
+  background: var(--gradient-brand);
   transition: width 0.25s ease;
 }
 
@@ -63,16 +63,15 @@
   height: 42px;
   border-radius: 50%;
   border: 0;
-  /* background: linear-gradient(135deg, #0f6b58, #223148); */
-  color: #000000;
+  background: transparent;
+  color: var(--text-main);
   cursor: pointer;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, color 0.2s ease;
 }
 
 .settings-btn:hover {
   transform: rotate(20deg);
-  color: #0f6b58;
-
+  color: var(--color-primary);
 }
 
 .setting-row {

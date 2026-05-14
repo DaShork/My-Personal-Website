@@ -27,7 +27,7 @@
 .story-stats .ant-card {
   border-radius: 10px;
   text-align: center;
-  background: linear-gradient(120deg, #0f6b58, #223148);
+  background: var(--gradient-brand);
   color: #fff;
   font-weight: 500;
 }
@@ -61,18 +61,18 @@
 
 .social-grid .ant-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 16px rgba(15, 107, 88, 0.15);
+  box-shadow: 0 8px 16px color-mix(in srgb, var(--color-primary) 22%, transparent);
 }
 
 .social-grid a {
-  color: #0f6b58;
+  color: var(--color-primary);
   text-decoration: none;
   font-weight: 500;
   display: block;
 }
 
 .social-grid a:hover {
-  color: #223148;
+  color: var(--color-deep-green);
 }
 
 .section.reveal {

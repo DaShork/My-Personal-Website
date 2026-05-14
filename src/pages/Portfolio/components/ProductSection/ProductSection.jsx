@@ -109,22 +109,8 @@ function ProductSection({ language = 'vi', username = 'DaShork' }) {
                 }}
               >
                 <div style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
-                  <h3 style={{ marginTop: 0, marginBottom: '8px', color: '#0f6b58' }}>
-                    {formattedData.name}
-                  </h3>
-                  <p style={{
-                    marginBottom: '12px',
-                    color: '#666',
-                    fontSize: '14px',
-                    flex: 1,
-                    overflow: 'hidden',
-                    textOverflow: 'ellipsis',
-                    display: '-webkit-box',
-                    WebkitLineClamp: 3,
-                    WebkitBoxOrient: 'vertical',
-                  }}>
-                    {formattedData.description}
-                  </p>
+                  <h3 className="repo-card-title">{formattedData.name}</h3>
+                  <p className="repo-card-desc">{formattedData.description}</p>
 
                   <div style={{ marginBottom: '12px', display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
                     <Tag
@@ -139,28 +125,12 @@ function ProductSection({ language = 'vi', username = 'DaShork' }) {
                     >
                       {formattedData.language}
                     </Tag>
-                    <Tag
-                      icon={<StarOutlined />}
-                      style={{
-                        backgroundColor: '#fff3cd',
-                        color: '#856404',
-                        border: '1px solid #ffc107',
-                        padding: '4px 8px',
-                        borderRadius: '4px',
-                        fontSize: '12px',
-                      }}
-                    >
+                    <Tag icon={<StarOutlined />} className="repo-star-tag">
                       {starsFormatted} stars
                     </Tag>
                   </div>
 
-                  <p style={{
-                    fontSize: '12px',
-                    color: '#999',
-                    marginBottom: '16px',
-                  }}>
-                    Updated {updatedDate}
-                  </p>
+                  <p className="repo-card-updated">Updated {updatedDate}</p>
 
                   <Button
                     type="primary"

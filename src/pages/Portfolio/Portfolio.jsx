@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useLayoutEffect, useMemo, useState } from 'react'
 import { ConfigProvider, theme as antdTheme } from 'antd'
 import Header from '../../components/Header/Header'
 import HeroSection from './components/HeroSection/HeroSection'
@@ -19,23 +19,30 @@ function Portfolio() {
     en: ['Home', 'Products', 'About us', 'FAQ', 'Contact'],
   }
 
-  const themeConfig = useMemo(
-    () => ({
+  const themeConfig = useMemo(() => {
+    const root = typeof document !== 'undefined' ? document.documentElement : null
+    const styles = root ? getComputedStyle(root) : null
+    const colorPrimary =
+      styles?.getPropertyValue('--color-primary').trim() || '#39B54A'
+    const colorInfo =
+      styles?.getPropertyValue('--color-deep-green').trim() || '#006837'
+
+    return {
       algorithm:
         themeMode === 'dark'
           ? antdTheme.darkAlgorithm
           : antdTheme.defaultAlgorithm,
       token: {
-        colorPrimary: '#0f6b58',
-        colorInfo: '#223148',
+        colorPrimary,
+        colorInfo,
+        colorLink: colorPrimary,
         borderRadius: 12,
-        fontFamily: '"Plus Jakarta Sans", "Inter", sans-serif',
+        fontFamily: "'Roboto', 'Inter', sans-serif",
       },
-    }),
-    [themeMode],
-  )
+    }
+  }, [themeMode])
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     document.body.setAttribute('data-theme', themeMode)
   }, [themeMode])
 

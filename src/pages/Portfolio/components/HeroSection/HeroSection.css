@@ -6,7 +6,6 @@
   gap: 28px;
   align-items: center;
   min-height: 380px;
-  padding: 54px 0;
 }
 
 .hero h1 {
@@ -16,7 +15,7 @@
 }
 
 .hero h3 {
-  color: #0f6b58;
+  color: var(--color-primary);
   margin: 14px 0 8px;
 }
 
@@ -28,7 +27,7 @@
 .eyebrow {
   font-size: 0.875rem;
   font-weight: 600;
-  color: #0f6b58;
+  color: var(--color-primary);
   margin: 0 0 12px;
   text-transform: uppercase;
   letter-spacing: 0.5px;

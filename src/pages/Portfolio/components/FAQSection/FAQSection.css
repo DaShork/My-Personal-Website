@@ -1,7 +1,7 @@
 /* FAQ Section Styles */
 
 .faq-section {
-  background: color-mix(in srgb, #dbfff2 55%, var(--surface));
+  background: var(--faq-section-tint);
 }
 
 .faq-section .ant-collapse-item {
@@ -12,7 +12,7 @@
 }
 
 .faq-section .ant-collapse-header {
-  color: #0f6b58 !important;
+  color: var(--color-primary) !important;
   font-weight: 500;
 }
 

@@ -13,6 +13,40 @@
   font-weight: 500;
 }
 
+.repo-card-title {
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: var(--color-primary);
+}
+
+.repo-card-desc {
+  margin-bottom: 12px;
+  color: var(--text-soft);
+  font-size: 14px;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.repo-card-updated {
+  font-size: 12px;
+  color: var(--text-soft);
+  opacity: 0.9;
+  margin-bottom: 16px;
+}
+
+.repo-star-tag {
+  background-color: color-mix(in srgb, var(--color-secondary) 22%, #fff) !important;
+  color: color-mix(in srgb, var(--color-deep-green) 55%, #333) !important;
+  border: 1px solid color-mix(in srgb, var(--color-secondary) 65%, #ccc) !important;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
 .repos-grid {
   margin-top: 40px;
   /* display: grid; */
@@ -27,22 +61,29 @@
 }
 
 .repo-card:hover {
-  box-shadow: 0 8px 16px rgba(15, 107, 88, 0.15);
+  box-shadow: 0 8px 16px color-mix(in srgb, var(--color-primary) 18%, transparent);
   transform: translateY(-4px);
 }
 
 /* Dark mode support */
 [data-theme='dark'] .repo-card {
-  background-color: #141414;
-  border-color: #434343;
+  background-color: var(--surface);
+  border-color: var(--border-soft);
 }
 
-[data-theme='dark'] .repo-card h3 {
-  color: #0f6b58 !important;
+[data-theme='dark'] .repo-card .repo-card-title {
+  color: var(--color-primary) !important;
 }
 
-[data-theme='dark'] .repo-card p {
-  color: #bfbfbf !important;
+[data-theme='dark'] .repo-card .repo-card-desc,
+[data-theme='dark'] .repo-card .repo-card-updated {
+  color: var(--text-soft) !important;
+}
+
+[data-theme='dark'] .repo-star-tag {
+  background-color: color-mix(in srgb, var(--color-secondary) 12%, var(--surface)) !important;
+  color: var(--color-secondary) !important;
+  border-color: color-mix(in srgb, var(--color-secondary) 45%, var(--border-soft)) !important;
 }
 
 /* Responsive */
